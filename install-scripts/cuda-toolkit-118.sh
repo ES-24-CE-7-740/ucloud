@@ -36,12 +36,16 @@ echo "Installing CUDA Toolkit..."
 sh $installer_path --silent --toolkit --toolkitpath=$HOME/cuda/11.8
 echo "CUDA Toolkit installed successfully."
 
+# Set environment variables
+export CUDA_HOME=$HOME/cuda/11.8
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+
 # Add environment variables to .bashrc
 echo "Setting environment variables..."
 echo "export CUDA_HOME=$HOME/cuda/11.8" >> $HOME/.bashrc
 echo "export PATH=\$CUDA_HOME/bin:\$PATH" >> $HOME/.bashrc
 echo "export LD_LIBRARY_PATH=\$CUDA_HOME/lib64:\$LD_LIBRARY_PATH" >> $HOME/.bashrc
-. $HOME/.bashrc
 
 nvcc --version
 echo "CUDA Toolkit installation completed."
