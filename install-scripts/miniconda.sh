@@ -19,11 +19,10 @@ if ! command -v conda &> /dev/null; then
     # Initialize Conda
     eval "$($CONDA_BIN shell.bash hook)"
     $CONDA_BIN init bash
-    export PATH="$CONDA_DIR/bin:$PATH"
 else
     echo "Conda already installed."
 fi
 
 # Ensure Conda is accessible
+export PATH="$CONDA_DIR/bin:$PATH"
 echo "export PATH=\"$CONDA_DIR/bin:\$PATH\"" >> $HOME/.bashrc
-. $HOME/.bashrc
