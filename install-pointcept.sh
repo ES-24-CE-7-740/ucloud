@@ -29,7 +29,7 @@ conda activate pointcept
 
 echo "
 # Automatically start a specific tmux session if not already in one
-if [ "$TERM_PROGRAM" = tmux ]; then
+if [ -z "$TMUX" ]; then
   tmux
 fi
 " >> $HOME/.bashrc
