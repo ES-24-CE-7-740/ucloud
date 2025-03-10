@@ -22,12 +22,16 @@ sh install-script.sh
 rm install-script.sh
 
 # Set .bashrc settings
-echo "# Automatically activate pointcept environment
-conda activate pointcept" >> $HOME/.bashrc
+echo "
+# Automatically activate pointcept environment
+conda activate pointcept
+" >> $HOME/.bashrc
 
-echo "# Automatically start a specific tmux session if not already in one
-if [ -z "$TMUX" ]; then
-    tmux
-fi" >> $HOME/.bashrc
+echo "
+# Automatically start a specific tmux session if not already in one
+if [ "$TERM_PROGRAM" = tmux ]; then
+  tmux
+fi
+" >> $HOME/.bashrc
 
 echo "Installation completed successfully."
