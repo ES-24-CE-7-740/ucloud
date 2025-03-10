@@ -25,5 +25,5 @@ else
 fi
 
 # Ensure Conda is accessible
-export PATH="$CONDA_DIR/bin:$PATH"
-echo "export PATH=\"$CONDA_DIR/bin:\$PATH\"" >> ~/.bashrc
+echo "export PATH=\"$CONDA_DIR/bin:\$PATH\"" >> $HOME/.bashrc
+source $HOME/.bashrc
