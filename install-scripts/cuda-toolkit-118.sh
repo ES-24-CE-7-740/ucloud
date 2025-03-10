@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -e  # Exit on error
+
 # This script installs CUDA Toolkit 11.8
 mkdir -p $HOME/cuda
 cd $HOME/cuda

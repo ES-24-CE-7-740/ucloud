@@ -26,3 +26,8 @@ fi
 
 # Ensure Conda is accessible
 export PATH="$CONDA_DIR/bin:$PATH"
+
+# Add Conda to PATH in .bashrc if not already present
+if ! grep -q "export PATH=\"$CONDA_DIR/bin:\$PATH\"" ~/.bashrc; then
+    echo "export PATH=\"$CONDA_DIR/bin:\$PATH\"" >> ~/.bashrc
+fi
