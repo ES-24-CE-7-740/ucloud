@@ -6,8 +6,9 @@ set -e  # Exit on error
 mkdir -p $HOME/cuda
 cd $HOME/cuda
 
-# Download the CUDA Toolkit installer
-wget https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda_11.8.0_520.61.05_linux.run
+# Download the CUDA Toolkit installer # TODO: Check for existing installer before downloading
+# The -q option suppresses the progress bar and other output
+wget https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda_11.8.0_520.61.05_linux.run -q
 
 # Check md5sum of the installer to avoid corrupted installer
 # The expected md5sum for the installer is "d6cf26349e5a4104b8683e26b717fa22 cuda_11.8.0_520.61.05_linux.run"
