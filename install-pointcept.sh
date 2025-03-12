@@ -2,7 +2,7 @@
 
 # This script installs Pointcept repo with CUDA 11.8, pytorch 2.1.0, Miniconda and flash-attention.
 echo "Starting installation..."
-git clone https://github.com/ES-25-CE-8-846/ucloud.git
+git clone https://github.com/ES-24-CE-7-740/ucloud.git
 
 echo "Creating installation script..."
 cat ucloud/install-scripts/cuda-toolkit-118.sh >> install-script.sh
