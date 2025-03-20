@@ -1,0 +1,1 @@
+tensorboard --logdir epoch-test/OACNN/10/ --bind_all --port 6005
